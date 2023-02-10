@@ -172,7 +172,7 @@ const ProductListScreen = ({ history }) => {
                       'No Price'
                     )}
                   </td>
-                  <td>{product.category.name}</td>
+                  <td>{product.category?.name}</td>
                   <td>
                     {product.addon.map((a) => (
                       <span key={a._id}>

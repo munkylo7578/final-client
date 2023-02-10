@@ -67,6 +67,7 @@ const StripeCheckoutForm = ({ cartItems, userInfo }) => {
       setProcessing(false)
     } else {
       if (payload.paymentIntent.status === 'succeeded') {
+        console.log(payload.paymentIntent,"70000")
         dispatch(createOrder(payload.paymentIntent, 'Stripe'))
         setError(null)
         setProcessing(false)

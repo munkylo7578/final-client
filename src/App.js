@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import { Container, Image } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
 import loadingGif from './image/Bean Eater-1s-207px.gif'
+import ContactScreen from './screens/ContactScreen'
 
 const Footer = lazy(() => import('./components/Footer'))
 const Header = lazy(() => import('./components/Header'))
@@ -111,6 +112,7 @@ function App() {
             <Route path='/' component={HomeScreen} exact />
             <Route path='/register' component={RegisterScreen} exact />
             <Route path='/login' component={LoginScreen} />
+            <Route path='/contact' component={ContactScreen} />
             <Route path='/forgot/password' component={ForgetPasswordScreen} />
             <Route
               path='/register/complete'

@@ -15,14 +15,14 @@ const CategoryCarousalHome = ({ setCatSlug }) => {
   //showCategory list
   const categoryList = useSelector((state) => state.categoryList)
   const { categories, error: errorCategory } = categoryList
-
+  console.log(categoryList,"18888")
   const settings = {
     dots: false,
     arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 8,
-    slidesToScroll: 3,
+    slidesToScroll: 3,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
     responsive: [
       {
         breakpoint: 1024,
@@ -63,6 +63,7 @@ const CategoryCarousalHome = ({ setCatSlug }) => {
               style={{
                 // backgroundColor: '#f6e58d',
                 padding: '10px',
+                
                 margin: '0px 10px',
               }}
               className='d-flex flex-column justify-content-center align-items-center'
@@ -70,7 +71,7 @@ const CategoryCarousalHome = ({ setCatSlug }) => {
                 setCatSlug(c.slug)
               }}
             >
-              <img src={c?.image?.url} alt='' className='img-fluid w-50' />
+              <img src={c?.image?.url} style={{height:"100px",width:"200px"}} alt='' className='img-fluid' />
               <small style={{ color: '#ffffff' }}>{c.name}</small>
             </Button>
           </div>

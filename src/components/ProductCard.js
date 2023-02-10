@@ -23,6 +23,7 @@ const ProductCard = ({ product, loading, error, userInfo, loadingAdd }) => {
           <ModalImage
             small={product.image?.url}
             large={product.image?.url}
+            style={{height:"100px"}}
             alt={product.title}
             className='product__by__category__box'
           />

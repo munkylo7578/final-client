@@ -36,6 +36,7 @@ export const logInUser = (user) => async (dispatch) => {
     dispatch({ type: USER_LOGIN_REQUEST })
 
     const { token } = await user.getIdTokenResult()
+    
     const config = {
       headers: {
         'Content-Type': 'application/json',

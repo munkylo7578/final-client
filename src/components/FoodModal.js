@@ -131,7 +131,7 @@ const FoodModal = ({
                     <ListGroup.Item style={{ backgroundColor: 'transparent' }}>
                       {product.variable && <h4>Choose from bellow: </h4>}
                       {product.price ? (
-                        <h5>Price: {product.price}</h5>
+                        <h5>Price: {product.price * counter} $</h5>
                       ) : product.variable ? (
                         product.variable.attribute.map((attr) => (
                           <div key={attr._id}>
@@ -177,7 +177,7 @@ const FoodModal = ({
                             value: a._id,
                           }))}
                           value={addon}
-                          onChange={setAddon}
+                          onChange={setAddon}counter
                           labelledBy='Select Addon'
                           className='product-addons'
                         />

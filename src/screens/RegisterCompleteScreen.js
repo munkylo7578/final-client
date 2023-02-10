@@ -63,7 +63,7 @@ const RegisterCompleteScreen = ({ history, location }) => {
   return (
     <FormContainer>
       <Meta title='Food Store | Register Complete' />
-      <h3>complete Register</h3>
+      <h3>Complete Register</h3>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
       <Form onSubmit={submitHandler}>
